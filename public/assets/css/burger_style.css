@@ -1,8 +1,19 @@
 .jumbotron {
     margin-top: 20px;
+    background-color: bisque;
+}
+
+h1 {
+    font-family: 'Sonsie One', cursive;
 }
 
 body {
     background-image: url("../../assets/img/tablecloth-texture.jpg");
     background-repeat: repeat;
 }
+
+.burger {
+    background-color: burlywood;
+    padding: 20px;
+}
+
