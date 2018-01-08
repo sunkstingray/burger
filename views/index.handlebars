@@ -1,9 +1,7 @@
-<h1>Eat-Da-Burger!</h1>
-
-<main>
   <div class="container">
+      <div class="jumbotron"><img src="/assets/img/burger.png"><h1>Eat-Da-Burger!</h1></div>
     <div class="row">
-      <div class="col s6">
+      <div class="col">
         {{#each burgers}}
           {{#unless this.devoured}}
             <div>
@@ -15,7 +13,7 @@
         {{/each}}
       </div>
 
-      <div class="col s6">
+      <div class="col">
         {{#each burgers}}
           {{#if this.devoured}}
             <div class='burgerEaten'>
@@ -27,16 +25,16 @@
         {{/each}}
       </div>
     </div>
-  </div>
-</main>
+    <div class="jumbotron">
+        <h2>Add A Burger Option</h2>
 
-<h2>Add A Burger Option</h2>
-
-<div class="row">
-  <div class="col s12">
-    <form action="/burgers" method="POST">
-      <input type="text" id="name" name="burger_name" placeholder="Uber Delicious Burger">
-      <button type="submit" class="addBurgerButton">Add The Burger</button>
-    </form>
+        <div class="row">
+        <div class="col s12">
+            <form action="/burgers" method="POST">
+            <input type="text" id="name" name="burger_name" placeholder="New Burger Name">
+            <button type="submit" class="addBurgerButton">Add The Burger</button>
+            </form>
+        </div>
+        </div>
+    </div>
   </div>
-</div>
