@@ -2,11 +2,13 @@
       <div class="jumbotron text-center"><img src="/assets/img/burger.png"><h1>Eat-Da-Burger!</h1></div>
     <div class="row">
       <div class="col burger">
+        <h2>Burgers to Eat</h2>
         {{#each burgers}}
           {{#unless this.devoured}}
             <div>
-              <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-                <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
+              <form class="form-inline" action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                <div class='burgerAvailable'>{{this.burger_name}}</div>
+                <button type="submit" class='btn btn-dark btn-sm'> Devour</button>
               </form>
             </div>
           {{/unless}}
@@ -14,6 +16,7 @@
       </div>
 
       <div class="col burger">
+        <h2>Burgers Eaten</h2>
         {{#each burgers}}
           {{#if this.devoured}}
             <div class='burgerEaten'>
@@ -32,7 +35,7 @@
         <div class="col s12">
             <form action="/burgers" method="POST">
             <input type="text" id="name" name="burger_name" placeholder="New Burger Name">
-            <button type="submit" class="addBurgerButton">Add The Burger</button>
+            <button type="submit" class="addBurgerButton btn btn-outline-danger btn-sm">Add The Burger</button>
             </form>
         </div>
         </div>

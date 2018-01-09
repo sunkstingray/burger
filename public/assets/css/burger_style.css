@@ -1,10 +1,18 @@
 .jumbotron {
     margin-top: 20px;
     background-color: bisque;
+    box-shadow: 4px 4px 20px black;
+    padding: 20px;
 }
 
 h1 {
     font-family: 'Sonsie One', cursive;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: 'Arima Madurai', cursive;
+    margin-bottom: 20px;
 }
 
 body {
@@ -15,5 +23,26 @@ body {
 .burger {
     background-color: burlywood;
     padding: 20px;
+    margin: 20px;
 }
 
+.burgerEaten {
+    padding: 6px;
+    background-color: bisque;
+    margin-bottom: 10px;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+.burgerAvailable {
+    padding: 6px;
+    background-color: bisque;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+.btn-sm {
+    margin-bottom: 6px;
+}
