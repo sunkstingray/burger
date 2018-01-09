@@ -1,4 +1,4 @@
-// Import the MySQL connection object
+// Import mySQL connection object
 var connection = require ('./connection.js');
 
 // Helper function for generating MySQL syntax
@@ -41,7 +41,7 @@ var orm = {
 		});
 	},
 
-	// Function that insert a single table entry
+	// Function that inserts a single table entry
 	insertOne: function(table, cols, vals, cb) {
 		// Construct the query string that inserts a single row into the target table
 		var queryString = "INSERT INTO " + table;

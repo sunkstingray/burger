@@ -1,6 +1,8 @@
+// Pull in required dependencies
 var mysql = require("mysql");
 var connection;
 
+// Make JawsDB connection if on Heroku or local mySQL if running locally
 if (process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -19,4 +21,5 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
+//Export DB connection for models file to use (burger.js)
 module.exports = connection;
